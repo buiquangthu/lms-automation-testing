@@ -1,0 +1,37 @@
+{
+  "addCourseCases": [
+    {
+      "testId": "TC_COURSE_01",
+      "description": "Thêm Khóa học thành công",
+
+      "titleVi": "Khóa học Automation Test v1.0",
+      "requirementsVi": "Có kiến thức cơ bản về Java",
+      "outcomesVi": "Thành thạo Selenium và TestNG",
+      "aboutVi": "Khóa học dành cho người mới bắt đầu",
+
+      "titleEn": "",
+      "requirementsEn": "",
+      "outcomesEn": "",
+      "aboutEn": "",
+
+      "type": "Khóa học",
+      "requiredType": "Bắt buộc",
+      "drip": "Không",
+      "category": "Tiếng Nhật",
+      "modeOfDelivery": "Trực tuyến",
+      "level": "Beginner",
+      "language": "Tiếng Việt",
+
+
+      "instructor": "Admin Test auto",
+      "assistantInstructor": "Administrator",
+      "duration": "120",
+      "accessLimit": "0",
+
+      "thumbnailPath": "",
+
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ]
+}

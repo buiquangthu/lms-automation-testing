@@ -1,0 +1,52 @@
+{
+  "loginTestCases": [
+    {
+      "testId": "TC_AUTH_1",
+      "description": "Đăng nhập với tài khoản hợp lệ",
+      "username": "administrator@welearning.vn",
+      "password": "StrongerTogether@2023",
+      "rememberMe": false,
+      "expectedResult": {
+        "redirectTo": "Dashboard",
+        "message": "Welcome back, Administrator"
+      }
+    },
+    {
+      "testId": "TC_AUTH_2",
+      "description": "Đăng nhập với tài khoản có password không hợp lệ",
+      "username": "test",
+      "password": "default",
+      "rememberMe": false,
+      "expectedResult": {
+        "message": "These credentials do not match our records."
+      }
+    },
+    {
+      "testId": "TC_AUTH_3",
+      "description": "Đăng nhập để trống các trường thông tin",
+      "username": "",
+      "password": "",
+      "rememberMe": false,
+      "expectedResult": {
+        "message": "The email field is required. (and 1 more error)"
+      }
+    },
+    {
+      "testId": "TC_AUTH_4",
+      "description": "Kiểm tra hộp checkbox Remember me",
+      "username": "administrator@welearning.vn",
+      "password": "StrongerTogether@2023",
+      "rememberMe": true
+    },
+    {
+      "testId": "TC_AUTH_5",
+      "description": "Đăng nhập với tài khoản bị khóa",
+      "username": "testauto@gmail.com",
+      "password": "Demo@2025",
+      "rememberMe": false,
+      "expectedResult": {
+        "message": "These credentials do not match our records."
+      }
+    }
+  ]
+}

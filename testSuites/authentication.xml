@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="vn.oes.base.Listeners"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="D:/Software_Testing/Selenium/LMS_Autotesting">
+        <classes>
+<!--            <class name="vn.oes.tests.Auth.LoginTest">-->
+<!--                <methods>-->
+<!--                    <include name="LoginWithDataFromJson"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="vn.oes.tests.UserManagementTest.PositionTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>

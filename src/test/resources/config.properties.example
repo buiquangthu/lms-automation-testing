@@ -1,0 +1,14 @@
+# ============================================================
+# LMS Automation Testing - Configuration Template
+# ============================================================
+# HƯỚNG DẪN: Copy file này thành "config.properties"
+# và điền thông tin môi trường của bạn vào.
+# QUAN TRỌNG: Không commit file "config.properties" lên Git!
+# ============================================================
+
+# URL môi trường test
+baseUrl=https://your-lms-url.example.com
+
+# Tài khoản test (dùng tài khoản test, KHÔNG dùng tài khoản thật)
+username=your_test_username@example.com
+password=your_test_password

@@ -1,0 +1,148 @@
+{
+  "searchStudentCases": [
+    {
+      "testId": "TC_HV_1",
+      "description": "Tìm kiếm học viên có tồn tại theo Tên",
+      "searchKeyword": "GV_BQT",
+      "isSuccessExpected": true
+    },
+    {
+      "testId": "TC_HV_1_1",
+      "description": "Tìm kiếm học viên có tồn tại theo Email",
+      "searchKeyword": "demotest@gmail.com",
+      "isSuccessExpected": true
+    },
+    {
+      "testId": "TC_HV_2",
+      "description": "Tìm kiếm học viên không tồn tại",
+      "searchKeyword": "xyz_hoc_vien_ao",
+      "isSuccessExpected": false
+    }
+  ],
+  "addStudentCases": [
+    {
+      "testId": "TC_HV_3",
+      "description": "Thêm học viên thành công với đầy đủ thông tin",
+      "studentName": "Nguyễn Văn Automation",
+      "userName": "nguyenvanauto",
+      "email": "auto.nguyenvan@welearning.vn",
+      "studentCode": "HV_AUTO_01",
+      "password": "Password@123",
+      "department": "Phòng ban Auto",
+      "position": "Trưởng nhóm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_HV_3_1",
+      "description": "Thêm học viên bỏ trống trường tên đăng nhập",
+      "userName": "",
+      "studentName": "Nguyễn Văn Auto 2",
+      "email": "auto.nguyenvanv1@welearning.vn",
+      "studentCode": "HV_AUTO_03",
+      "password": "Password@123",
+      "department": "Phòng ban Auto",
+      "position": "Trưởng nhóm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_HV_3_2",
+      "description": "Thêm học viên bỏ trống trường email",
+      "userName": "nguyenvanauto2",
+      "studentName": "Nguyễn Văn Auto 2",
+      "email": "",
+      "studentCode": "HV_AUTO_04",
+      "password": "Password@123",
+      "department": "Phòng ban Auto",
+      "position": "Trưởng nhóm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_HV_4",
+      "description": "Thêm học viên thất bại do bỏ trống Tên",
+      "userName": "",
+      "studentName": "",
+      "email": "auto.test02@welearning.vn",
+      "studentCode": "HV_AUTO_02",
+      "password": "Password@123",
+      "isSuccessExpected": false,
+      "expectedMessage": "Trường tên là bắt buộc."
+    },
+    {
+      "testId": "TC_HV_5",
+      "description": "Thêm học viên thất bại do sai định dạng Email",
+      "userName": "",
+      "studentName": "Trần Thị Sai Email",
+      "email": "email_khong_hop_le",
+      "studentCode": "HV_AUTO_03",
+      "password": "Password@123",
+      "isSuccessExpected": false,
+      "expectedMessage": "Vui lòng nhập địa chỉ email hợp lệ."
+    },
+    {
+      "testId": "TC_HV_6",
+      "description": "Thêm học viên thất bại do trùng Email đã tồn tại",
+      "userName": "",
+      "studentName": "Lê Văn Trùng lặp",
+      "email": "auto.nguyenvan@welearning.vn",
+      "studentCode": "HV_AUTO_04",
+      "password": "Password@123",
+      "isSuccessExpected": false,
+      "expectedMessage": "Email đã tồn tại"
+    },
+    {
+      "testId": "TC_HV_7",
+      "description": "Thêm học viên thất bại do Mật khẩu quá ngắn",
+      "studentName": "Phạm Văn Pass Ngắn",
+      "email": "auto.pass2@welearning.vn",
+      "studentCode": "HV_AUTO_05",
+      "password": "123",
+      "isSuccessExpected": false,
+      "expectedMessage": "Mật khẩu phải có ít nhất 6 ký tự"
+    },
+    {
+      "testId": "TC_HV_7_1",
+      "description": "Bỏ trống trường mật khẩu",
+      "studentName": "Phạm Văn A",
+      "email": "auto.pass1@welearning.vn",
+      "studentCode": "HV_AUTO_05",
+      "password": "123",
+      "isSuccessExpected": false,
+      "expectedMessage": "Trường mật khẩu là bắt buộc."
+    },
+    {
+
+    }
+  ],
+  "editStudentCases": [
+    {
+      "testId": "TC_HV_8",
+      "description": "Cập nhật thông tin Phòng ban và Chức danh của học viên",
+      "targetEmail": "auto.nguyenvan@welearning.vn",
+      "newDepartment": "Nhóm Tester",
+      "newPosition": "Nhân viên",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ],
+  "deleteStudentCases": [
+    {
+      "testId": "TC_HV_9",
+      "description": "Hủy bỏ thao tác xóa học viên",
+      "targetEmail": "auto.nguyenvan@welearning.vn",
+      "action": "cancel",
+      "isSuccessExpected": false,
+      "expectedMessage": ""
+    },
+    {
+      "testId": "TC_HV_10",
+      "description": "Xóa học viên thành công",
+      "targetEmail": "auto.nguyenvan@welearning.vn",
+      "action": "confirm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ]
+}

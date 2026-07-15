@@ -1,0 +1,126 @@
+{
+  "searchPositionCases": [
+    {
+      "testId": "TC_VTCD_3",
+      "description": "Kiểm tra chức năng Tìm kiếm nhanh có kết quả",
+      "positionName": "Giám đốc",
+      "isSuccessExpected": true
+    },
+    {
+      "testId": "TC_VTCD_4",
+      "description": "Kiểm tra Tìm kiếm nhanh không có kết quả",
+      "positionName": "xyz_khong_ton_tai",
+      "isSuccessExpected": false
+    }
+
+  ],
+  "addPositionCases": [
+    {
+      "testId": "TC_VTCD_6",
+      "description": "Thêm chức danh thành công với dữ liệu hợp lệ",
+      "positionName": "Trưởng nhóm",
+      "positionCode": "TN",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_VTCD_7",
+      "description": "Thêm chức danh khi bỏ trống trường Tên",
+      "positionName": "",
+      "positionCode": "PGD",
+      "isSuccessExpected": false,
+      "expectedMessage": "Please fill out this field."
+    },
+    {
+      "testId": "TC_VTCD_8",
+      "description": "Thêm chức danh khi bỏ trống trường Mã",
+      "positionName": "Phó Giám đốc",
+      "positionCode": "",
+      "isSuccessExpected": false,
+      "expectedMessage": "Please fill out this field."
+    },
+    {
+      "testId": "TC_VTCD_11",
+      "description": "Thêm chức danh với Mã đã tồn tại",
+      "positionName": "Giám đốc mới",
+      "positionCode": "TN",
+      "isSuccessExpected": false,
+      "expectedMessage": "Mã đã được sử dụng."
+    },
+    {
+      "testId": "TC_VTCD_14",
+      "description": "Thêm chức danh với dữ liệu có khoảng trắng đầu/cuối",
+      "positionName": " Kế toán trưởng ",
+      "positionCode": " KTT ",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ],
+
+  "importPositionCases": [
+    {
+      "testId": "TC_VTCD_19",
+      "description": "Nhập chức danh từ file Excel hợp lệ",
+      "fileName": "sample_org_position.xlsx",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_VTCD_21",
+      "description": "Nhập chức danh với file không đúng định dạng",
+      "fileName": "Feautures.docx",
+      "isSuccessExpected": false,
+      "expectedMessage": "Sai loại định dạng file. Chỉ chấp nhận xls,xlsx"
+    }
+  ],
+
+  "editPositionCases": [
+    {
+      "testId": "TC_VTCD_27",
+      "description": "Chỉnh sửa chức danh thành công",
+      "targetPositionName": "Giám đốc",
+      "newPositionName": "Tổng Giám đốc",
+      "newPositionCode": "TGD",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_VTCD_30",
+      "description": "Chỉnh sửa chức danh với Tên trùng chức danh khác",
+      "targetPositionName": "Thực tập sinh",
+      "newPositionName": "Giám đốc",
+      "newPositionCode": "TTS",
+      "isSuccessExpected": false,
+      "expectedMessage": "Tên chức danh đã tồn tại"
+    },
+    {
+      "testId": "TC_VTCD_33",
+      "description": "Chỉnh sửa chức danh - chỉ sửa Tên, giữ nguyên Mã",
+      "targetPositionName": "Nhân viên",
+      "newPositionName": "Nhân viên chính thức",
+      "newPositionCode": "NV",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ],
+
+  "deletePositionCases": [
+    {
+      "testId": "TC_VTCD_35",
+      "description": "Hủy bỏ xóa chức danh",
+      "targetPositionName": "Thử việc",
+      "action": "cancel",
+      "isSuccessExpected": false,
+      "expectedMessage": ""
+    },
+    {
+      "testId": "TC_VTCD_36",
+      "description": "Xóa chức danh thành công",
+      "targetPositionName": "Thử việc",
+      "action": "confirm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+
+  ]
+}

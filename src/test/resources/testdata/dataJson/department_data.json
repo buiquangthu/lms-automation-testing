@@ -1,0 +1,103 @@
+{
+  "searchDepartmentCases": [
+    {
+      "testId": "TC_SDTC_1",
+      "description": "Tìm kiếm phòng ban có tồn tại",
+      "departmentName": "Phòng ban Auto",
+      "isSuccessExpected": true
+    },
+    {
+      "testId": "TC_SDTC_2",
+      "description": "Tìm kiếm phòng ban không tồn tại",
+      "departmentName": "xyz_phong_ban_ao",
+      "isSuccessExpected": false
+    }
+  ],
+
+  "addDepartmentCases": [
+    {
+      "testId": "TC_SDTC_3",
+      "description": "Thêm phòng ban thành công (Thư mục gốc)",
+      "departmentName": "Phòng ban Auto",
+      "departmentCode": "AUTO01",
+      "parentDepartment": "",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_SDTC_4",
+      "description": "Thêm phòng ban con thành công",
+      "departmentName": "Nhóm Tester",
+      "departmentCode": "AUTO01_QC",
+      "parentDepartment": "Phòng ban Auto",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_SDTC_5",
+      "description": "Thêm phòng ban khi bỏ trống trường Tên",
+      "departmentName": "",
+      "departmentCode": "AUTO02",
+      "parentDepartment": "",
+      "isSuccessExpected": false,
+      "expectedMessage": "Please fill out this field."
+    },
+    {
+      "testId": "TC_SDTC_6",
+      "description": "Thêm phòng ban trùng Mã đã tồn tại",
+      "departmentName": "Phòng ban Kế toán",
+      "departmentCode": "AUTO01",
+      "parentDepartment": "",
+      "isSuccessExpected": false,
+      "expectedMessage": "Mã đã được sử dụng."
+    }
+  ],
+  "importDepartmentCases": [
+    {
+      "testId": "TC_SDTC_10",
+      "description": "Nhập phòng ban từ file Excel hợp lệ",
+      "fileName": "sample_org_branch.xlsx",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    },
+    {
+      "testId": "TC_SDTC_11",
+      "description": "Nhập file excel có định dạng không hợp lệ",
+      "fileName": "Feautures.docx",
+      "isSuccessExpected": false,
+      "expectedMessage": "Sai loại định dạng file. Chỉ chấp nhận xls,xlsx"
+    }
+  ],
+
+  "editDepartmentCases": [
+    {
+      "testId": "TC_SDTC_7",
+      "description": "Cập nhật tên phòng ban thành công",
+      "targetDepartmentName": "Phòng ban Auto",
+      "targetSubDepartmentName": "",
+      "newDepartmentName": "Phòng ban Auto Updated",
+      "newDepartmentCode": "AUTO01_UPDATED",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ],
+
+  "deleteDepartmentCases": [
+    {
+      "testId": "TC_SDTC_8",
+      "description": "Hủy bỏ xóa phòng ban",
+      "targetDepartmentName": "Phòng ban Auto Updated",
+      "action": "cancel",
+      "isSuccessExpected": false,
+      "expectedMessage": ""
+    },
+    {
+      "testId": "TC_SDTC_9",
+      "description": "Xóa phòng ban thành công",
+      "targetDepartmentName": "Phòng ban Auto Updated",
+      "action": "confirm",
+      "isSuccessExpected": true,
+      "expectedMessage": "Thao tác thành công"
+    }
+  ]
+}
